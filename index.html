@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firefly</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="first-stuff">
+    <!-- PARALLAX AND INTRO TEXT-->
+    <section>
+        <img src="night-sky.jpg" id="night">
+        <img src="moon.png" id="moon">
+        <img src="mountains.png" id="mountains">
+        <img src="road-pic.png" id="roads">
+        <h2 id="text">Firefly Shuttle</h2>
+        <br>
+    </section>
+    <h5 id="text2">Overnight Bus Travel</h5>
+    <div class="button">
+        <button>Book Now</button>
+    </div>
+    <br>
+    
+    <!-- <div class="hrone"><hr></div>-->
+    <p id="text3">Popular Destinations:</p>
+    <!-- PARALLAX AND INTRO TEXT-->
+    </div>
+    
+
+    <!-- DESTINATION CARDS -->
+
+    <div class="fullDeck">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-image1"></div>
+            <div class="card-text">
+                <!-- <span class="date">4 days ago</span> -->
+                <h2>Stanley, ID</h2>
+                <p>A historical fur trappingtown in the Sawtooth Valley in Custer County.</p>
+            </div>
+            <div class="card-stats">
+                <div class="stat">
+                    <div class="value">4.6</div>
+                    <div class="type">Stars</div>
+                </div>
+                <div class="stat border">
+                    <div class="value">80 +</div>
+                    <div class="type">Trips</div>
+                </div>
+                <div class="stat">
+                    <div class="value">9</div>
+                    <div class="type">comments</div>
+              </div>
+            </div>
+        </div>
+
+
+          <!-- Card 2-->
+          <div class="card">
+            <div class="card-image2"></div>
+            <div class="card-text">
+              <!--<span class="date">4 days ago</span>-->
+              <h2>Olympia, WA</h2>
+              <p>The capital of Washington state, and the largest city in Thurston County.</p>
+            </div>
+            <div class="card-stats">
+              <div class="stat">
+                <div class="value">4.4</div>
+                <div class="type">Sars</div>
+              </div>
+              <div class="stat border">
+                <div class="value">150 +</div>
+                <div class="type">Trips</div>
+              </div>
+              <div class="stat">
+                <div class="value">20</div>
+                <div class="type">comments</div>
+              </div>
+            </div>
+          </div>
+
+
+        <!-- Card 3 -->
+         <div class="card">
+            <div class="card-image3"></div>
+            <div class="card-text">
+              <h2>Cannon Beach, OR</h2>
+              <p>Famous for the sea stack Haystack Rock, Cannon Beach is a city in Clatsop County. </p>
+            </div>
+            <div class="card-stats">
+              <div class="stat">
+                <div class="value">4.8</div>
+                <div class="type">Stars</div>
+              </div>
+              <div class="stat border">
+                <div class="value">95 +</div>
+                <div class="type">Trips</div>
+              </div>
+              <div class="stat">
+                <div class="value">18</div>
+                <div class="type">comments</div>
+              </div>
+            </div>
+          </div>
+    </div>
+    </br>    
+   
+    <div class="hrone"><hr></div>
+
+    <!-- DESTINATION CARDS -->
+
+
+    <!-- JS SCROLL FUNCTIONALITY-->
+    <script type="text/javascript">
+        let bg = document.getElementById("night");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountains");
+        let road = document.getElementById("roads");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', function() {
+            var value = window.scrollY;
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value * 0.5 + 'px'; 
+            mountain.style.top = -value * 0.15 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            text.style.top = value * 1 + 'px';
+        })
+    </script>
+    <!-- JS SCROLL FUNCTIONALITY-->
+</body>
+</html>

@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald';
+}
+
+body {
+    background: #0a2a43;
+    min-height: 1500px;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #0a2a43, transparent);
+    z-index: 10000;
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#0a2a43;
+    z-index: 10000;
+    mix-blend-mode: color;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#night {
+    z-index: -50;
+}
+
+#mountains {
+    z-index: -20;
+}
+
+#road {
+    z-index: 10;
+}
+
+#text {
+
+    color: white;
+    font-size: 7em;
+    z-index: -10;
+    transform: translate(-150px, -190px);
+}
+
+#text2 {
+    font-size: 4em;
+    color: rgb(189, 189, 189);
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 15px;
+
+}
+
+#text3 {
+    
+    font-size: 3em;
+    color: rgb(189, 189, 189);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.hrone {
+    margin-bottom: 50px;
+}
+.hrone hr {
+    width: 20%;
+    margin: 0 auto;
+    /* border: 3px solid rgb(189, 189, 189);*/
+    border: #0a2a43;
+
+    border-radius: 5px;
+    
+}
+
+.endcap hr {
+    border: 1px solid rgb(189, 189, 189);
+}
+
+button {
+    margin-left: 45%;
+    margin-bottom: 30px;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(223, 223, 223);
+    background-color: #497e4b;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+
+/* VVVV- CSS JUST FOR DESTINATION CARDS -VVVV */
+.fullDeck {
+    margin-left: 8%;
+
+}
+
+
+.card {
+    display: grid;
+    width: 300px;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:30px;
+    float:left;
+}
+
+  .card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  }
+  
+  .card-text {
+    grid-area: text;
+  }
+  .card-stats {
+    grid-area: stats; 
+  }
+
+  .card-image1 {
+    background: url("img1.jpg");
+    grid-area: image;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+  }
+
+  .card-image2 {
+    background: url("img2.jpg");
+    grid-area: image;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+  }
+  
+  .card-image3 {
+    background: url("img3.jpg");
+    grid-area: image;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+  }
+
+  .card-text {
+    grid-area: text;
+    margin: 25px;
+  }
+
+  .card-text .date {
+    color: rgb(255, 7, 110);
+    font-size:13px;
+  }
+
+  .card-text p {
+    color: grey;
+    font-size:15px;
+    font-weight: 300;
+  }
+
+  .card-text h2 {
+    margin-top:0px;
+    font-size:28px;
+  }
+
+  .card-stats {
+    grid-area: stats; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: rgb(108, 132, 165);
+  }
+
+  .card-stats .stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    padding:10px;
+  }
